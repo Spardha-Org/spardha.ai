@@ -1,6 +1,3 @@
-Here's the updated README with the added image names and pull commands:
-
-```markdown
 # Spardha.ai
 
 This project combines **Django** (backend), **React** (frontend), and **PostgreSQL** (database) to deliver a full-stack web application. Below, you'll find an overview of the project, its setup instructions, and how to contribute.
@@ -34,7 +31,6 @@ Ensure you have the following installed on your system:
 git clone https://github.com/NandishNaik01/spardha.ai.git
 cd spardha.ai
 ```
-````
 
 ### 2. Backend Setup
 
@@ -50,18 +46,13 @@ cd spardha.ai
    pip install -r requirements.txt
    ```
 3. Set up the database:
-
    - Setup your .env according to your `.env.template`.
-
-4. Set up the database:
-
    - Update the database settings in `settings.py`.
    - Apply migrations:
      ```bash
      python manage.py migrate
      ```
-
-5. Start the server:
+4. Start the server:
    ```bash
    python manage.py runserver
    ```
@@ -79,9 +70,7 @@ cd spardha.ai
    npm install
    ```
 3. Setup .env:
-
-   - Setup according to `.env.template`
-
+   - Setup according to `.env.template`.
 4. Start the development server:
    ```bash
    npm start
@@ -96,9 +85,7 @@ cd spardha.ai
    cd agent
    ```
 2. Setup .env:
-
-   - Setup according to `.env.template`
-
+   - Setup according to `.env.template`.
 3. Start the development server:
    ```bash
    python3 agent.py start
@@ -110,13 +97,10 @@ cd spardha.ai
 
 1. Install PostgreSQL and create a database.
 2. Update the database credentials in the backend's `settings.py`.
-
 3. To populate your database with all agent configuration:
-
    ```bash
    cd server
    ```
-
 4. Start the development server:
    ```bash
    python3 manage.py import_csv.py
@@ -193,15 +177,15 @@ docker pull nandishnaik/spardha.ai-postgres:v0.0.1
 ---
 
 ## Project Structure
+
+```
 project-root/
 |├── agent/           # Worker Script
-|├── server/           # Django backend
-     ├── server/settings.py           # Django backend
+|├── server/          # Django backend
+|     ├── server/settings.py
 |├── client/          # React frontend
-|├── requirements.txt   # Backend dependencies
-|└── README.md         # Project documentation
-```
-
+|├── requirements.txt # Backend dependencies
+|└── README.md        # Project documentation
 ```
 
 ---
@@ -233,3 +217,4 @@ For questions or feedback, feel free to reach out:
 
 - **Email**: [naik.nandishd@gmail.com](mailto:naik.nandishd@gmail.com)
 - **LinkedIn**: [linkedin.com/nandishd](https://www.linkedin.com/in/nandishd/)
+
