@@ -1,0 +1,17 @@
+steps:
+  # Step 1: Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/jpmc-frontend', '.']
+
+  # Step 2: Push the Docker image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/jpmc-frontend']
+
+# Substitutions can be used to pass dynamic values to the build
+substitutions:
+  _SERVICE_NAME: 'jpmc-frontend'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+timeout: '900s'

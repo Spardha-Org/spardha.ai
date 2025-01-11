@@ -1,0 +1,76 @@
+# Python-related files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+*.egg
+*.egg-info/
+.eggs/
+
+# Django-related files
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+
+# Media and static files
+/media/
+*/media/
+staticfiles/
+*/staticfiles/
+*.svg
+
+# Environment and configuration files
+*.ini
+*.cfg
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Virtual environments
+venv/
+ENV/
+.venv/
+.ENV/
+
+# Build artifacts
+build/
+dist/
+*.bak
+*.old
+*.save
+
+# Node.js (if you have frontend assets in the project)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Pipenv and poetry
+Pipfile
+Pipfile.lock
+poetry.lock
+poetry.toml
