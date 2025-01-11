@@ -1,8 +1,5 @@
 # Spardha.ai
 
-This project combines **Django** (backend), **React** (frontend), and **PostgreSQL** (database) to deliver a full-stack web application. Below, you'll find an overview of the project, its setup instructions, and how to contribute.
-
----
 
 ## Features
 
@@ -28,7 +25,7 @@ Ensure you have the following installed on your system:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/NandishNaik01/spardha.ai.git
+git clone https://github.com/Spardha-Org/spardha.ai.git
 cd spardha.ai
 ```
 
@@ -103,7 +100,7 @@ cd spardha.ai
    ```
 4. Start the development server:
    ```bash
-   python3 manage.py import_csv.py
+   python3 manage.py import_csv
    ```
 
 ### Commands with Docker
@@ -182,9 +179,8 @@ docker pull nandishnaik/spardha.ai-postgres:v0.0.1
 project-root/
 |├── agent/           # Worker Script
 |├── server/          # Django backend
-|     ├── server/settings.py
 |├── client/          # React frontend
-|├── requirements.txt # Backend dependencies
+|├── requirements.txt # Project dependencies
 |└── README.md        # Project documentation
 ```
 
@@ -212,9 +208,3 @@ We welcome contributions! Please follow these steps:
 ---
 
 ## Contact
-
-For questions or feedback, feel free to reach out:
-
-- **Email**: [naik.nandishd@gmail.com](mailto:naik.nandishd@gmail.com)
-- **LinkedIn**: [linkedin.com/nandishd](https://www.linkedin.com/in/nandishd/)
-
