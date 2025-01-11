@@ -81,8 +81,10 @@ cd spardha.ai
    ```bash
    cd agent
    ```
-2. Setup .env:
+2. Setup .env and cred.json:
    - Setup according to `.env.template`.
+   - setup your cred.json file
+     
 3. Start the development server:
    ```bash
    python3 agent.py start
