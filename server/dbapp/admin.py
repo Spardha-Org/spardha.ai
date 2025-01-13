@@ -5,7 +5,7 @@ from .models import User, Agent, Prompt, Session, UserDetails
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'email', 'is_active', 'is_admin', 'created_at', 'updated_at')
+    list_display = ('id','username', 'email', 'is_active', 'is_admin', 'created_at', 'updated_at')
     search_fields = ('username', 'email')
     list_filter = ('is_active', 'is_admin')
 
@@ -23,8 +23,8 @@ class PromptAdmin(admin.ModelAdmin):
 
 @admin.register(Session)
 class SessionAdmin(admin.ModelAdmin):
-    list_display = ('user', 'agent', 'status', 'created_at', 'updated_at')
-    search_fields = ('user__username', 'agent__specialization_name')
+    list_display = ('id','user', 'agent', 'status', 'created_at', 'updated_at')
+    search_fields = ('id','user__username', 'agent__specialization_name')
     list_filter = ('status',)
 
 @admin.register(UserDetails)

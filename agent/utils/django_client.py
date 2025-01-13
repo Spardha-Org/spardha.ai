@@ -11,6 +11,11 @@ class DjangoapiClient:
 
     async def _request(self, method: str, endpoint: str, model: Type[T], **kwargs) -> T:
         async with httpx.AsyncClient() as client:
+            # Construct the full URL
+            url = f"{self.base_url}{endpoint}"
+
+            # Print the API request details
+            print(f"API Request - Method: {method}, URL: {url}, Params: {kwargs}")
             response = await client.request(method, f"{self.base_url}{endpoint}", timeout=self.timeout, **kwargs)
             response.raise_for_status()
             try:
