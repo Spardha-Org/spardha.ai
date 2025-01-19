@@ -1,5 +1,9 @@
 from django.contrib import admin
-from .models import User, Agent, Prompt, Session, UserDetails
+from .models.user import User 
+from .models.agent import Agent 
+from .models.session import Session 
+from .models.prompt import Prompt, LanguageEnum 
+from .models.user_details import UserDetails
 
 # Register the models with the admin site
 

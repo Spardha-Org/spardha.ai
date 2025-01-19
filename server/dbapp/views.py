@@ -1,11 +1,16 @@
-# dbapp/views.py
 from django.http import HttpResponse,JsonResponse
 import requests
-from .models import *
+from .models.user import User
+from .models.agent import Agent
+from .models.prompt import Prompt
+from .models.prompt import LanguageEnum
+from .models.session import Session
+from .models.session import Session
 from django.shortcuts import get_object_or_404
 import json
 from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime
+
 
 
 def hello_world(request):
