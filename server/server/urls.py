@@ -7,6 +7,5 @@ from .import views
 urlpatterns = [
     path('', views.homepage, name='homepage'),  # Homepage view
     path('admin/', admin.site.urls),
-    path('api/', include('dbapp.urls')),
-    path('auth/', include('agentauthapp.urls')),
+    path('api/', include('core.urls')),
 ]
