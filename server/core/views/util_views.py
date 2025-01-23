@@ -1,8 +1,16 @@
-# dbapp/views.py
 from django.http import HttpResponse,JsonResponse
 import requests
-from .models import *
+from ..models.user import User
+from ..models.agent import Agent
+from ..models.prompt import Prompt
+from ..models.prompt import LanguageEnum
+from ..models.session import Session
+from ..models.session import Session
 from django.shortcuts import get_object_or_404
+import json
+from django.views.decorators.csrf import csrf_exempt
+from datetime import datetime
+
 
 
 def hello_world(request):
@@ -26,14 +34,3 @@ def get_daily_quote(request):
         return JsonResponse(
             {"error": "Failed to fetch the quote", "details": str(e)}, status=500
         )
-    
-def get_primary_prompt(request, agent_id, language):
-    # Validate the language parameter
-    if language not in [lang.value for lang in LanguageEnum]:
-        return JsonResponse({'error': 'Invalid language'}, status=400)
-
-    # Fetch the prompt matching the agent ID and language
-    prompt = get_object_or_404(Prompt, agent_id=agent_id, language=language)
-
-    # Return the primary prompt
-    return JsonResponse({'primary_prompt': prompt.primary_prompt})

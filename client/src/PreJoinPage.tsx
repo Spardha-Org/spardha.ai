@@ -132,7 +132,7 @@ export const PreJoinPage = () => {
     // Log the body payload
     console.log("Request Body:", bodyPayload);
 
-    const tokenResponse = await fetch(`${apiBaseUrl}/auth/token/`, {
+    const tokenResponse = await fetch(`${apiBaseUrl}/api/token/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

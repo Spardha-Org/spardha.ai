@@ -2,7 +2,8 @@ import os
 import csv
 from uuid import UUID
 from django.core.management.base import BaseCommand
-from dbapp.models import Agent, Prompt
+from core.models.agent import Agent
+from core.models.prompt import Prompt 
 from datetime import datetime
 
 

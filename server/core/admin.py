@@ -1,11 +1,15 @@
 from django.contrib import admin
-from .models import User, Agent, Prompt, Session, UserDetails
+from .models.user import User 
+from .models.agent import Agent 
+from .models.session import Session 
+from .models.prompt import Prompt, LanguageEnum 
+from .models.user_details import UserDetails
 
 # Register the models with the admin site
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'email', 'is_active', 'is_admin', 'created_at', 'updated_at')
+    list_display = ('id','username', 'email', 'is_active', 'is_admin', 'created_at', 'updated_at')
     search_fields = ('username', 'email')
     list_filter = ('is_active', 'is_admin')
 
@@ -23,8 +27,8 @@ class PromptAdmin(admin.ModelAdmin):
 
 @admin.register(Session)
 class SessionAdmin(admin.ModelAdmin):
-    list_display = ('user', 'agent', 'status', 'created_at', 'updated_at')
-    search_fields = ('user__username', 'agent__specialization_name')
+    list_display = ('id','user', 'agent', 'status', 'created_at', 'updated_at')
+    search_fields = ('id','user__username', 'agent__specialization_name')
     list_filter = ('status',)
 
 @admin.register(UserDetails)
