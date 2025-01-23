@@ -77,8 +77,6 @@ async def entrypoint(ctx: JobContext):
         text=primary_prompt,
     )
 
-    print("this is initial ctx :", initial_ctx)
-
     agent = VoicePipelineAgent(
         vad=ctx.proc.userdata["vad"],
         stt=deepgram.STT(),
@@ -139,4 +137,4 @@ if __name__ == "__main__":
             entrypoint_fnc=entrypoint,
             prewarm_fnc=prewarm,
         ),
-    )
+    )   

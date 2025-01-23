@@ -1,5 +1,5 @@
 const urlConfig = {
-  isDevelopment: true, // Toggle this to `false` for production
+  isDevelopment: false, // Toggle this to `false` for production
 
   urls: {
     development: {
